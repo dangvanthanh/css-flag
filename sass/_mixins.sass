@@ -1,0 +1,76 @@
+// ARROW
+//----------------------------------------//
+=arrow($direction, $color, $size)
+	display: block
+	height: 0
+	width: 0
+	$transparent: $size solid transparent
+	$sizeborder: $size solid $color
+
+	@if $direction == "top"
+		border:
+			left: $transparent
+			right: $transparent
+			bottom: $sizeborder
+	@else if $direction == "right"
+		border:
+			top: $transparent
+			bottom: $transparent
+			left: $sizeborder
+	@else if $direction == "bottom"
+		border:
+			top: $sizeborder
+			right: $transparent
+			left: $transparent
+	@else if $direction == "left"
+		border:
+			top: $transparent
+			right: $sizeborder
+			bottom: $transparent
+	@else if $direction == "top-left"
+		border:
+			top: $sizeborder
+			right: $transparent
+	@else if $direction == "top-right"
+		border:
+			top: $sizeborder
+			left: $transparent
+	@else if $direction == "bottom-left"
+		border:
+			bottom: $sizeborder
+			right: $transparent
+	@else if $direction == "bottom-right"
+		border:
+			bottom: $sizeborder
+			left: $transparent
+
+// POSITION
+//----------------------------------------//
+$position-default-top: null !default
+$position-default-right: null !default
+$position-default-bottom: null !default
+$position-default-left: null !default
+
+// Private
+=_position($type, $top: $position-default-top, $right: $position-default-right, $bottom: $position-default-bottom, $left: $position-default-left)
+	$allowed_types: "absolute", "relative", "fixed"
+
+	@if not index($allowed_types, $type)
+		@warn "Unknow position: #{$type}."
+
+	position: $type
+
+	@each $data in top $top, right $right, bottom $bottom, left $left
+		#{nth($data, 1)}: nth($data, 2)
+
+// Absolute mixin
+=absolute($top: $position-default-top, $right: $position-default-right, $bottom: $position-default-bottom, $left: $position-default-left)
+	+_position(absolute, $top, $right, $bottom, $left)
+
+// Relative mixin
+=relative($top: $position-default-top, $right: $position-default-right, $bottom: $position-default-bottom, $left: $position-default-left)
+	+_position(relative, $top, $right, $bottom, $left)
+
+// Fixed mixin
+=fixed($top: $position-default-top, $right: $position-default-right, $bottom: $position-default-bottom, $left: $position-default-left)
+	+_position(fixed, $top, $right, $bottom, $left)			
