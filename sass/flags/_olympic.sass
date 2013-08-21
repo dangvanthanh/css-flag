@@ -1,0 +1,60 @@
+/**
+ * Olympic
+ */
+.flag__olympic
+	background-color: #fff
+	span
+		width: 4.5em
+		height: 4.5em
+		border-radius: 100%
+		border:
+			width: 0.4em 
+			style: solid
+
+.flag__olympic--blue
+	border-color: #33489d
+	+absolute($top: 30px, $left: 10px)
+	&.alt
+		border:
+			top-color: transparent
+			left-color: transparent
+			bottom-color: transparent
+		z-index: 25
+
+
+.flag__olympic--yellow
+	border-color: #fff023
+	+absolute($top: 65px, $left: 50px)
+	&.alt
+		border:
+			right-color: transparent
+			left-color: transparent
+			bottom-color: transparent
+		z-index: 23
+
+.flag__olympic--black
+	z-index: 21
+	border-color: #000
+	+absolute($top: 30px, $left: 85px)
+
+.flag__olympic--green
+	z-index: 15
+	border-color: #007531
+	+absolute($top: 65px, $left: 130px)
+	&.alt
+		border:
+			top-color: transparent
+			right-color: transparent
+			bottom-color: transparent
+		z-index: 23
+
+.flag__olympic--red
+	z-index: 10
+	border-color: #e64d4d
+	+absolute($top: 30px, $left: 160px)
+	&.alt
+		border:
+			top-color: transparent
+			right-color: transparent
+			left-color: transparent
+		z-index: 23
