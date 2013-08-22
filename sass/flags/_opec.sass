@@ -26,8 +26,7 @@
 				display: block
 				width: 0
 				height: 0
-				right: -5px
-				position: absolute
+				+absolute($right: -5px)
 				border: 7px solid #0088b7
 				border-right-color: transparent
 				border-radius: 100%	
@@ -45,9 +44,7 @@
 				height: 0
 				border: 10px solid #0088b7
 				border-right-color: transparent
-				position: absolute
-				right: -9px
-				top: 13px
+				+absolute($top: 13px, $right: -10px)
 				border-radius: 100%
 	&.line
 		width: 7px
