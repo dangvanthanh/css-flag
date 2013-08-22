@@ -66,7 +66,20 @@ header
 		text-transform: uppercase
 
 .main
-	margin: 40px 0	
+	margin: 40px 0
+
+footer
+	text-align: center
+	border-top: 1px solid #fff0ad		
+	padding: 10px 0
+
+.copyright
+	color: #fff
+	font-weight: 700
+	text-transform: uppercase
+	a
+		color: darken(#ff6867, 5%)
+		text-shadow: 0 1px 1px lighten(#ff6867, 5%)
 
 /**
  * Flags
@@ -100,4 +113,20 @@ header
 	text:
 		shadow: 0 1px 1px #fff
 		transform: uppercase
-	padding: 10px 0		
+	padding: 10px 0
+
+/**
+ * Github Ribon
+ */
+.github-ribbon
+	background: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png') no-repeat
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+	width: 149px
+	height: 149px
+	display: block
+	border: 0
+	z-index: 10
+	+fixed($top: 0, $right: 0)
+	
