@@ -1,18 +1,24 @@
-@import "compass"
-
 *,
 *:before,
 *:after
 	+box-sizing(border-box)	
 
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr
+	margin: 0
+	padding: 0
+
 body
-	background-color: #2c3e50
+	background-color: lighten(#012d3d, 5%)
 	color: #444
 	font:
-		family: Helvetica, Arial, sans-serif
+		family: 'Open Sans', sans-serif
 		size: 16px
 	line-height: 1.5
-	height: 100%
 
 .cleafix
 	*zoom: 1
@@ -22,30 +28,51 @@ body
 	&:after
 		clear: both	
 
+a 
+	color: #2d72d9
+	text-decoration: none
+	&:hover, &:after
+		color: #9099a7
+
+.row
+	width: 960px
+	margin:
+		left: auto
+		right: auto
+	position: relative
+
 /**
  * Layout
  */
 header
-	width: 15%
-	float: left
-	padding: 2em
+	background-color: lighten(#ffeb93, 5%)
+	height: 75px
+
+.site-logo
+	background-color: darken(#ffeb93, 10%)
+	margin-left: -65%
+	width: 100%
+	text-align: right
+	overflow: hidden
+	+absolute($top: 0, $left: 0)
 	a
-		color: #fff
-		text:
-			decoration: none
-			transform: uppercase
+		color: lighten(#ff6867, 5%)
+		display: block
+		font:
+			family: "Playfair Display", serif
+			size: 50px
+			weight: 700
+		padding: 0 15px
+		text-transform: uppercase
 
 .main
-	margin: 5em 0 
-	width: 85%
-	float: left 	
+	margin: 40px 0	
 
 /**
  * Flags
  */
 .flags
-	margin: 0
-	padding: 0
+	list-style-type: none
 	min-width: 48em
 	text-align: center
 	@extend .cleafix
@@ -67,6 +94,10 @@ header
 
 .flag__name
 	color: #fff
-	font-size: 21px
-	text-transform: uppercase
+	font:
+		size: 21px
+		weight: 700
+	text:
+		shadow: 0 1px 1px #fff
+		transform: uppercase
 	padding: 10px 0		
