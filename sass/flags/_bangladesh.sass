@@ -1,10 +1,13 @@
+/**
+ * Banglades
+ */
 .flag__bangladesh
 	background-color: #077235
-	span
+	&:before
+		content: ""
+		display: inline-block
 		background-color: #e41028
 		width: 7.5em
 		height: 7.5em
-		position: absolute
-		top: 20px
-		left: 35px
 		border-radius: 100%
+		+absolute($top: 20px, $left: 35px)
