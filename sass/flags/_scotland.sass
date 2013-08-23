@@ -1,0 +1,17 @@
+/**
+ * Scotland
+ */
+.flag__scotland
+	background-color: #084d9b
+	&:before, &:after
+		background-color: #fff
+		content: ""
+		display: inline-block
+		width: 310px
+		height: 30px
+	&:before
+		+rotate(32deg)
+		+absolute($top: 65px, $left: -35px)
+	&:after
+		+rotate(147deg)
+		+absolute($top: 65px, $right: -35px)	
