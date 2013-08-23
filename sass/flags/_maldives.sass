@@ -1,0 +1,25 @@
+/**
+ * Maldives
+ */
+.flag__maldives
+	background-color: #cf1616
+	span
+		background-color: #189158
+		display: block
+		width: 10em
+		height: 5em
+		+relative($top: 40px, $left: 40px)
+		&:before, &:after
+			content: ""
+			display: block
+			border-radius: 100%
+		&:before
+			background-color: #fff
+			width: 3.5em
+			height: 3.5em
+			+absolute($top: 15px, $left: 55px)
+		&:after
+			background-color: #189158
+			width: 3.4em
+			height: 3.4em
+			+absolute($top: 16px, $left: 62px)
