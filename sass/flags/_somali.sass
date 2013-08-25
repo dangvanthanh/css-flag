@@ -4,35 +4,35 @@
 .flag__somali
 	background-color: #547bb1
 	span
-		margin-top: 65px
-		position: relative
-		display: inline-block
+		margin-top: 60px
+		display: block
 		color: #fff
 		width: 0
 		height: 0
 		border:
 			right: 70px solid transparent
-			bottom: 40px solid #fff
+			bottom: 47px solid #fff
 			left: 70px solid transparent
+		+absolute($left: 50px)	
 		+rotate(35deg)
 		&:before
 			content: ""
 			border: 
 				bottom: 50px solid #fff
-				left: 15px solid transparent
-				right: 15px solid transparent
+				left: 18px solid transparent
+				right: 18px solid transparent
 			width: 0
 			height: 0
 			position: absolute
 			top: -35px
-			left: -42px
+			left: -47px
 			display: block
 			+rotate(-35deg)
 		&:after
 			content: ""
 			border:
 				right: 70px solid transparent
-				bottom: 40px solid #fff
+				bottom: 47px solid #fff
 				left: 70px solid transparent
 			width: 0
 			height: 0

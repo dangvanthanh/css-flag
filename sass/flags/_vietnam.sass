@@ -4,40 +4,40 @@
 .flag__vietnam
 	background-color: #d11717
 	span
-		margin-top: 65px
-		position: relative
-		display: inline-block
+		margin-top: 60px
+		display: block
 		color: #faeb08
 		width: 0
 		height: 0
 		border:
 			right: 70px solid transparent
-			bottom: 40px solid #faeb08
+			bottom: 47px solid #faeb08
 			left: 70px solid transparent
+		+absolute($left: 50px)	
 		+rotate(35deg)
 		&:before
 			content: ""
 			border: 
 				bottom: 50px solid #faeb08
-				left: 15px solid transparent
-				right: 15px solid transparent
+				left: 18px solid transparent
+				right: 18px solid transparent
 			width: 0
 			height: 0
 			position: absolute
 			top: -35px
-			left: -42px
+			left: -47px
 			display: block
 			+rotate(-35deg)
 		&:after
 			content: ""
 			border:
 				right: 70px solid transparent
-				bottom: 40px solid #faeb08
+				bottom: 47px solid #faeb08
 				left: 70px solid transparent
 			width: 0
 			height: 0
 			position: absolute
-			top: 3px
+			top: 5px
 			left: -77px
 			display: block
 			+rotate(-70deg)
